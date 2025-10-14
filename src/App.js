@@ -3,7 +3,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
-import SkillsSection from "./components/SkillsSection";
+import CareerSection from "./components/CareerSection";
+import EducationSection from "./components/EducationSection";
 import ProjectsSection from "./components/ProjectsSection"; // 프로젝트 섹션
 import "./style.css";
 
@@ -32,7 +33,8 @@ function App() {
       <Header />
       <HomeSection />
       <AboutSection />
-      <SkillsSection />
+      <CareerSection />
+      <EducationSection />
       <ProjectsSection openReadme={openReadme} /> {/* 프로젝트 섹션 */}
       <Footer />
 

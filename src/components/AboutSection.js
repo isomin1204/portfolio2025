@@ -19,7 +19,7 @@ function AboutSection() {
           </div>
           <div>
             <img src={process.env.PUBLIC_URL + "/images/email.png"} alt="아이콘" className="icon" />
-            dlthals1204@gmail.com
+            sm1157@naver.com
           </div>
           <div>
             <img src={process.env.PUBLIC_URL + "/images/location.png"} alt="아이콘" className="icon" />

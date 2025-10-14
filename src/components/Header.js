@@ -7,7 +7,8 @@ function Header() {
         <ul className="nav-menu">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">Profile</a></li>
-          <li><a href="#skills">Career</a></li>
+          <li><a href="#career">Career</a></li>
+          <li><a href="#education">Education</a></li>
           <li><a href="#projects">Projects</a></li>
         </ul>
       </nav>
