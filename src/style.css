@@ -1,0 +1,208 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  color: #333;
+  line-height: 1.6;
+  background: #f1f1f5;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+h1, h2, h3 {
+  margin: 0 0 15px;
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Navigation Header */
+.main-header {
+  background: #f1f1f5;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: #e67e22;
+}
+
+/* Footer */
+.main-footer {
+  background-color: #f1f1f5;
+  height: 100px;
+  margin-top: 40px;
+  display: flex;           
+  justify-content: center;  
+  align-items: center;    
+  color: #333;   
+  font-size: 12px;
+  text-align: center;
+}
+
+
+/* Home Section */
+.home {
+  color: #333;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.home-text {
+  margin-bottom: 40px;
+}
+
+.home-title {
+  font-size: clamp(30px, 5vw, 36px);
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+.home-title strong {
+  font-weight: bold;
+}
+
+.home-subtitle {
+  font-size: clamp(14px, 3vw, 20px);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* more Section */
+.more-wrapper {
+  margin-top: 30px;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.more-link {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.arrow-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.arrow-down {
+  width: 20px;
+  height: 20px;
+}
+
+.more-wrapper:hover .more-link,
+.more-wrapper:hover .arrow-link {
+  transform: translateY(5px);
+  color: #555;
+}
+
+/* About Section */
+.about {
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #222;
+  text-align: center;
+}
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-photo {
+  width: 220px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.profile-info .icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+.profile-info a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  display: inline-block;
+}
+
+.profile-info a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 1px; 
+  background: #333;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.profile-info a:hover::after {
+  width: 100%;
+  left: 0; 
+}

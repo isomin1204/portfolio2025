@@ -1,0 +1,285 @@
+.project-browser-frame {
+  border: 1px solid #ddd;
+  padding: 30px;
+  background: linear-gradient(155deg, #f5f5f5, #e0e0e0);
+  box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  position: relative;
+  max-width: 400px;  
+  height: 300px;   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 실제 이미지 */
+.project-browser-frame img.project-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: auto;
+  border-radius: 3px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.project-image-row {
+  display: flex;              
+  justify-content: center;    
+  align-items: center;    
+  gap: 5px;            
+  width: 100%;               
+  height: 60%; 
+  box-sizing: border-box;
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;  
+  margin: 20px auto;
+  max-width: 1100px;
+  justify-content: center;
+}
+
+/* 카드 제목/설명 */
+.project-card {
+  text-align: center;
+}
+
+.project-card h3 {
+  margin: 15px 0 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-card p {
+  margin: 0 0 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* 프로젝트 카드 안 overlay */
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;  
+  text-align: center;
+  text-decoration: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 0;             
+  z-index: 30;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-overlay h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.project-overlay p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.project-overlay .btn-readme {
+  padding: 8px 14px;
+  border: 1px solid #fff;
+  background: none; 
+  border-radius: 1px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.project-overlay .btn-readme:hover { 
+  background: #fff;
+  color: rgba(0,0,0,0.6);
+}
+
+/* overlay a 태그 링크 클릭 시 텍스트 스타일 유지 */
+.project-overlay a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 버튼 그룹 */
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.button-group button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* 모달 */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal.active { display: block; }
+
+.modal-content {
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  max-width: 100%;     
+  position: absolute;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  color: #fff; 
+  background-color: rgba(120, 120, 120, 0.6); 
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2); 
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.modal .close:hover {
+  background-color: rgba(90, 90, 90, 0.8); 
+  transform: scale(1.1); 
+}
+
+/* README 모달 */
+.readme-modal {
+  text-align: left; 
+  align-items: flex-start;
+  width: 100%;
+  min-width: 300px;
+  max-width: 800px; 
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.readme-badge {
+  display: inline-block;
+  margin: 10px 2px;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 2px 6px;
+  border-radius: 4px;
+  line-height: 1.5;
+}
+
+.readme-status.live {
+  background-color: #2ecc71;
+  color: #000;
+}
+
+.readme-status.updating {
+  background-color: #e67e22;
+  color: #fff;
+}
+
+.readme-modal h2 .readme-type {
+  color: #fff;
+  background-color: #232323;
+}
+
+.readme-modal h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 4px solid #eee;
+  padding-bottom: 5px;
+  color: #222;
+  text-align: center;
+}
+
+.readme-modal h3 {
+  font-size: 18px;
+  margin: 20px 0 10px;
+  color: #444;
+  border-left: 4px solid #e67e22;
+  padding-left: 8px;
+}
+
+/* 본문 문단 */
+.readme-modal p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+/* 리스트 */
+.readme-modal ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 10px;
+}
+
+.readme-modal li {
+  margin-bottom: 6px;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  margin-bottom: 12px;
+}
+
+ul li strong span {
+  display: block;           
+  width: 100%;                 
+  background-color: #f0f0f0;   
+  padding: 4px 8px;          
+  border-radius: 4px;         
+  box-sizing: border-box;     
+}
+
+ul li .description {
+  display: block;            
+  margin-top: 4px;           
+}
+
+p {
+  text-align: center;
+  margin: 20px 0; 
+}
