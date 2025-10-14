@@ -4,7 +4,7 @@ import './style.css';
 function Projects({ projects, openReadme }) {
   return (
     <section className="projects" id="projects">
-      <h2>PROJECTS</h2>
+      <h2>Projects</h2>
       <div className="projects-grid">
         {projects.map((p) => (
           <div key={p.id} className="project-card">

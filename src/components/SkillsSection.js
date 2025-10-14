@@ -4,8 +4,9 @@ import SkillsTabs from "../skills/SkillsTabs";
 function SkillsSection() {
   return (
     <section className="skills" id="skills">
-      <h2>SKILLS</h2>
-      <SkillsTabs />
+      <div className="skills-container">
+        <SkillsTabs />
+      </div>
     </section>
   );
 }

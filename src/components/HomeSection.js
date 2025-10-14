@@ -46,10 +46,9 @@ function HomeSection() {
       <div className="home-text">
         <h1 className="home-title" data-text="안녕하세요 이소민입니다."></h1>
         <p className="home-subtitle">
-          공간 UX 설계 경험을 바탕으로,<br />
-          이제는 디지털 환경에서 더 나은 사용자 경험을 만들어가고 있습니다.<br />
-          직관적이고 효율적인 인터페이스 구현에 집중하며
-          끊임없이 성장하는 개발자가 되고 싶습니다.
+          사람의 동선과 감각을 고려한 환경 설계를 바탕으로,<br />
+          사용자에게 직관적이고 쾌적한 경험을 제공하는 공간을 만들어가고 있습니다.<br />
+          세밀한 설계와 균형 있는 구성으로 더 나은 생활 환경을 구현하며 성장하는 디자이너가 되고자 합니다.
         </p>
 
         <div className="more-wrapper">
